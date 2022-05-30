@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Style.css" />
+    <link rel="shortcut icon" href="imgs/Logo.png" />
+    <title>Feel the Music</title>
+</head>
+
+<body class="reg_log">
+    <!-- Registro -->
+
+    <div class="log">
+        <div class="container">
+            <div class="banner">
+                <img src="imgs/Logo.png">
+                <div class="label">
+                    <label>Nome: </label>
+                    <input type="text" id="inp_nome" placeholder="User">
+                </div>
+                <div class="label">
+                    <label>Senha: </label>
+                    <input type="password" id="inp_senha" placeholder="********">
+                </div>
+                <div class="label">
+                    <span style="font-size: 18px;">Ainda não é membro?</span> <a href="Registro.html">Cadastrar-se</a>
+                </div>
+                <button class="logar" onclick='entrar()'>Entrar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fim do Registro -->
+</body>
+
+<script>
+
+    function entrar() {
+        var nome = inp_nome.value,
+            senha = inp_senha.value;
+
+        if (nome == nome.indexOf("")) {
+            alert("Nome não pode estar em branco, por favor, insira um Nome valido.")
+        } else if (senha == senha.indexOf("")) {
+            alert("Senha não pode estar em branco, por favor, insira uma Senha valida.")
+        } else if (senha.length < 6) {
+            alert("Algo errado, a senha tem menos de 6 digitos, digite novamente.")
+        } else {
+            alert("Tudo certo, você será redirecionado a Tela Inicial do Feel the Music")
+            //window.location.href = "Login.html";
+        }
+    }
+
+</script>
+
+</html>

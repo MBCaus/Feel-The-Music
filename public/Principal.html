@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imgs/Logo.png" />
+    <link rel="stylesheet" href="Style.css">
+    <script src="Quiz.js"></script>
+    <title>Feel the Music</title>
+</head>
+
+<body class="principal">
+
+    <!-- Começo da NavBar -->
+
+    <div class="br_nav">
+        <div class="nav">
+            <div class="container">
+
+                <div class="titulo">
+                    <h1>Feel the Music</h1>
+                </div>
+
+                <div class="logo">
+                    <img src="imgs/Logo_Cinza.png" alt="Logo">
+                </div>
+
+                <div class="urls">
+                    <ul>
+                        <li>
+                            <a href="Sobre.html">Sobre</a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <a href="Principal.html" id="aqui">Inicio</a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <a href="Index.html">Sair</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fim da NavBar -->
+
+    <!-- Inicio do Principio do site -->
+
+    <div class="principio">
+        <div class="container">
+            <div class="centro">
+                <p>
+                    Bem vindos a <span>Feel the Music</span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fim do Principio do site -->
+
+    <!-- Inicio do Contexto -->
+
+    <div class="contexto">
+        <div class="container">
+            <div class="texto">
+                <div class="div1">
+                    <h1>O que é a Música?</h1>
+                    <div class="sobre">
+                        <p>
+                            Música não é nada mais nada menos do que um conjunto de sons e pausas, que com a junção
+                            viram uma melodia, música é arte, cultura, rebeldia, forma de protesto e diversos outros
+                            meios, é alegria, é expressão.
+                        </p>
+                    </div>
+                </div>
+
+                <img src="imgs/Musica.jpg" alt="Música">
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Fim do Contexto -->
+
+    <!-- Inicio do Quiz -->
+
+    <div class="quiz">
+        <div class="container">
+            <div class="mensagens" id="msg" style="display: none;">
+                <span id="span_inc"></span>
+            </div>
+            <div class="jogo" id="iniJogo" style="display: block;">
+                <h1>Qual seu estilo musical?</h1> <br><br>
+                <button onclick="iniQuiz()" id="iniciar"> ▶ Iniciar Quiz</button>
+            </div>
+            <div class="part" id="parte1" style="display: none;">
+                <div class="perguntas">
+                    O que você faz quando algo muito bom acontece na sua vida?
+                </div>
+                <div class="respostas">
+                    <span>1ª Resposta:</span> Vou a um Show gastar o maximo de energia possivél.
+                    <span>2ª Resposta:</span> Me encontro com os amigos e vamos para baladas.
+                    <span>3ª Resposta:</span> Danço até me cansar.
+                </div>
+                <div class="botoes">
+                    <button onclick="rock1()">1</button>
+                    <button onclick="funk1()">2</button>
+                    <button onclick="sertanejo1()">3</button>
+                </div>
+            </div>
+
+            <div class="part" id="parte2" style="display: none;">
+                <div class="perguntas">
+                    Quando algo de ruim acontece em sua vida, o que você faz?
+                </div>
+                <div class="respostas">
+                    <span>1ª Resposta:</span> Ergo a cabeça e me praparo para mudar a situação.
+                    <span>2ª Resposta:</span> Apenas ignoro e sigo em frente.
+                    <span>3ª Resposta:</span> Fico melancólico até este assunto ser resolvido.
+                </div>
+                <div class="botoes">
+                    <button onclick="rock2()">1</button>
+                    <button onclick="funk2()">2</button>
+                    <button onclick="sertanejo2()">3</button>
+                </div>
+            </div>
+
+            <div class="part" id="parte3" style="display: none;">
+                <div class="perguntas">
+                    O que mais define sua personalidade?
+                </div>
+                <div class="respostas">
+                    <span>1ª Resposta:</span> Uma pessoa séria.
+                    <span>2ª Resposta:</span> Uma pessoas excêntrica.
+                    <span>3ª Resposta:</span> Uma pessoas resiliente.
+                </div>
+                <div class="botoes">
+                    <button onclick="rock3()">1</button>
+                    <button onclick="funk3()">2</button>
+                    <button onclick="sertanejo3()">3</button>
+                </div>
+            </div>
+
+            <div class="part" id="parte4" style="display: none;">
+                <div class="perguntas">
+                    O que não pode faltar na sua vida?
+                </div>
+                <div class="respostas">
+                    <span>1ª Resposta:</span> Me divertir com os amigos.
+                    <span>2ª Resposta:</span> Seguir as tradições.
+                    <span>3ª Resposta:</span> Ficar de bem com a vida.
+                </div>
+                <div class="botoes">
+                    <button onclick="rock4()">1</button>
+                    <button onclick="funk4()">2</button>
+                    <button onclick="sertanejo4()">3</button>
+                </div>
+            </div>
+
+            <div class="part" id="parte5" style="display: none;">
+                <div class="perguntas">
+                    Qual o melhor lugar para se passar a semana?
+                </div>
+                <div class="respostas">
+                    <span>1ª Resposta:</span> Festival de música.
+                    <span>2ª Resposta:</span> Praia.
+                    <span>3ª Resposta:</span> Campo.
+                </div>
+                <div class="botoes">
+                    <button onclick="rock5()">1</button>
+                    <button onclick="funk5()">2</button>
+                    <button onclick="sertanejo5()">3</button>
+                </div>
+            </div>
+
+            <div class="part" id="parte6" style="display: none;">
+                <div class="perguntas">
+                    O que gosta de fazer no dia a dia?
+                </div>
+                <div class="respostas">
+                    <span>1ª Resposta:</span> Estudar, trabalhar, escutar música.
+                    <span>2ª Resposta:</span> Não fazer nada, ficar em casa, dormir.
+                    <span>3ª Resposta:</span> Uma boa comida, cerveja, amigos.
+                </div>
+                <div class="botoes">
+                    <button onclick="rock6()">1</button>
+                    <button onclick="funk6()">2</button>
+                    <button onclick="sertanejo6()">3</button>
+                </div>
+            </div>
+
+            <div class="part" id="parte7" style="display: none;">
+                <div class="perguntas">
+                    Você planeja seu futuro?
+                </div>
+                <div class="respostas">
+                    <span>1ª Resposta:</span> Sim, planejo meu futuro sériamente.
+                    <span>2ª Resposta:</span> Não, deixo a vida me levar.
+                    <span>3ª Resposta:</span> Não exatamente, gosto da minha vida do jeito que está.
+                </div>
+                <div class="botoes">
+                    <button onclick="rock7()">1</button>
+                    <button onclick="funk7()">2</button>
+                    <button onclick="sertanejo7()">3</button>
+                </div>
+            </div>
+
+            <div class="part" id="parte8" style="display: none;">
+                <div class="perguntas">
+                    Qual sua comida favorita?
+                </div>
+                <div class="respostas">
+                    <span>1ª Resposta:</span> Hamburguer com batata frita.
+                    <span>2ª Resposta:</span> Coxinha/Salgados no geral.
+                    <span>3ª Resposta:</span> Saladas e coisas saúdaveis.
+                </div>
+                <div class="botoes">
+                    <button onclick="rock8()">1</button>
+                    <button onclick="funk8()">2</button>
+                    <button onclick="sertanejo8()">3</button>
+                </div>
+            </div>
+
+            <div class="final" id="fim" style="display: none;">
+                <div class="msg_final">
+                    <span id="span_inc2"></span>
+                </div>
+                <button onclick="jogar_denovo()">↺ Jogar Novamente</button>
+                <button onclick="novo_cadastro()" id="cadastrar">+ Cadastrar estilo</button>
+            </div>
+
+            <div class="genero" id="genero1" style="display: none;">
+                <div class="mensagem_genero">
+                    <p>Gostaria de ver algum outro <span>gênero</span> musical aqui no site? então faça o
+                        <span>cadastro</span> de novos estilos!</p>
+                </div>
+                <div class="nome_genero">
+                    <p>Nome do Gênero:</p>
+                    <input type="text" id="ipt_genero">
+                </div>
+                <div class="descricao">
+                    <p>Adicione também uma descrição sobre o gênero:</p>
+                    <input type="text" id="ipt_descricao_genero">
+                </div>
+                <button onclick="jogar_denovo()">↺ Jogar Novamente</button>
+                <button onclick="cadastrar()">Cadastrar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fim do Quiz -->
+
+    <!-- Inicio do Footer -->
+
+    <div class="footer">
+        <p>
+            &copy; Feito por Matheus B Caus ra: 02221023 1-CCO &copy;
+        </p>
+    </div>
+
+    <!-- Fim do Footer -->
+
+</body>
+
+</html>

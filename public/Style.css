@@ -1,0 +1,550 @@
+/* CSS iniciais */
+
+.principal {
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+}
+
+.reg_log {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    font-family: monospace;
+    background-size: cover;
+    background-image: url(imgs/Fundo\ Desfocado.jpg);
+}
+
+.container {
+    width: 80%;
+    display: flex;
+}
+
+/* Fim do CSS inicial */
+
+/* inicio da NavBar */
+
+.nav {
+    display: flex;
+    justify-content: center;
+    background-color: #000000;
+    padding: 0.5%;
+}
+
+.nav img {
+    height: 50px;
+    margin: 0;
+    margin-right: 62px;
+}
+
+.nav .container {
+    align-items: center;
+    justify-content: space-between;
+    width: 87vw;
+}
+
+.nav .titulo {
+    font-size: 19px;
+}
+
+.nav .titulo h1 {
+    font-family: monospace;
+    margin: 0;
+    color: #d3d3d3;
+}
+
+.urls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    font-weight: bold;
+    font-size: 15px;
+    color: #fff;
+}
+
+.urls ul {
+    list-style: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.urls a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.urls #aqui {
+    font-weight: bold;
+    font-size: 17px;
+    text-decoration: none;
+    color: #d3d3d3;
+}
+
+/* Fim da NavBar */
+
+/* Inicio Cadastro */
+
+.reg {
+    height: calc(100vh - 72px);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-image: url(imagens/login.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.reg .container {
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.reg .banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 500px;
+    height: min-content;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 22px;
+    border-radius: 30px;
+    color: white;
+    background-color: rgba(41, 38, 38, 0.602);
+}
+
+.label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
+    font-size: 20px;
+}
+
+input {
+    padding: 9px;
+    font-size: 15px;
+    border: none;
+    width: 250px;
+    border-radius: 10px;
+    margin-top: 5px;
+    color: white;
+    box-shadow: #000000 5px;
+    background-color: #333b43;
+}
+
+.reg a {
+    font-size: 13px;
+    color: #fff;
+}
+
+.cadastrar {
+    border: none;
+    margin-top: 15px;
+    font-size: 18px;
+    width: 150px;
+    height: 35px;
+    border-radius: 3px;
+    color: white;
+    box-shadow: #000000 5px;
+    background-color: #333b43;
+    cursor: pointer;
+}
+
+.reg img {
+    height: 50px;
+}
+
+/* Fim do Cadastro */
+
+/* Inicio do Login */
+
+.log {
+    height: calc(100vh - 72px);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-image: url(imagens/login.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.log .container {
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.log .banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 500px;
+    height: min-content;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 22px;
+    border-radius: 30px;
+    color: white;
+    background-color: rgba(41, 38, 38, 0.602);
+}
+
+.label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
+    font-size: 20px;
+}
+
+input {
+    padding: 9px;
+    font-size: 15px;
+    border: none;
+    width: 250px;
+    border-radius: 10px;
+    margin-top: 5px;
+    color: white;
+    box-shadow: #000000 5px;
+    background-color: #333b43;
+}
+
+.log a {
+    font-size: 13px;
+    color: #fff;
+}
+
+.logar {
+    border: none;
+    margin-top: 15px;
+    font-size: 18px;
+    width: 120px;
+    height: 35px;
+    border-radius: 3px;
+    color: white;
+    box-shadow: #000000 5px;
+    background-color: #333b43;
+    cursor: pointer;
+}
+
+.log img {
+    height: 50px;
+}
+
+/* Fim do Login /*
+
+/* Inicio do Principio do site */
+
+.principio {
+    height: 92vh;
+    width: 98.7.1vw;
+    display: flex;
+    justify-content: center;
+    background-image: url(imgs/Banner.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.principio .container {
+    justify-content: center;
+    align-items: center;
+}
+
+.principio .centro {
+    /*background-color: rgba(0, 0, 0, 0.95);*/
+    height: 300px;
+    width: 350px;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    border-radius: 3px;
+}
+
+.principio .centro p {
+    padding: 15px;
+    color: #000000;
+    font-size: 40px;
+    margin: 0;
+}
+
+.principio .centro p span {
+    color: #000000;
+    font-weight: bold;
+}
+
+/* Fim do Principio */
+
+/* Inicio do Contexto */
+
+.contexto {
+    display: flex;
+    justify-content: center;
+    height: 700px;
+    background-color: #000000;
+    color: #fff;
+}
+
+.sobre {
+    width: 500px;
+}
+
+.sobre1 {
+    margin-top: 30px;
+}
+
+.div2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.contexto .texto {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+
+.texto h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.texto p {
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.texto img {
+    height: 350px;
+    border-radius: 50px;
+    border: #fff 1px solid;
+}
+
+.texto #cure {
+    height: 250px;
+}
+
+.img_texto p {
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+    width: 100%;
+    color: lightgray;
+}
+
+/* Fim do Contexto */
+
+/* Inicio do Quiz */
+
+.quiz {
+    display: flex;
+    justify-content: center;
+    height: 800px;
+    background-color: rgb(217, 217, 178);
+    font-family: monospace;
+}
+
+.quiz .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.quiz .jogo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.jogo h1 {
+    display: flex;
+    justify-content: center;
+    color: #000000;
+}
+
+#iniciar {
+    border: none;
+    border-radius: 50px;
+    padding: 7px;
+    height: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: #000000 3px 3px 3px;
+}
+
+.part {
+    width: 100%;
+}
+
+.quiz .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mensagens {
+    font-size: 20px;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.perguntas {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 100px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.respostas {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-weight: bold;
+    margin-bottom: 100px;
+    font-size: 20px;
+}
+
+.respostas span {
+    color: rgb(196, 2, 2);
+    font-weight: bold;
+    font-size: 23px;
+}
+
+
+.botoes {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.botoes button {
+    border: none;
+    padding: 5px;
+    width: 70px;
+    height: 40px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: #000000 3px 3px 3px;
+}
+
+.final {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.final .msg_final {
+    margin-bottom: 100px;
+    font-weight: bold;
+    font-size: 23px;
+}
+
+.final button {
+    font-weight: bold;
+    width: 150px;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: #000000 3px 3px 3px;
+}
+
+.final a {
+    text-decoration: none;
+    font-size: 23px;
+    font-weight: bold;
+    color: red;
+}
+
+.genero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.genero .mensagem_genero {
+    margin-bottom: 80px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.genero .mensagem_genero span {
+    color: red;
+}
+
+.nome_genero p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.nome_genero input {
+    width: 50%;
+    color: #000000;
+    box-shadow: #000000 3px 3px 3px;
+    background-color: rgba(255, 255, 255, 0.734);
+}
+
+.descricao p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.descricao input {
+    width: 30%;
+    height: 100px;
+    margin-bottom: 50px;
+    color: #000000;
+    box-shadow: #000000 3px 3px 3px;
+    background-color: rgba(255, 255, 255, 0.734);
+}
+
+.genero button {
+    font-weight: bold;
+    width: 150px;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: #000000 3px 3px 3px;
+}
+
+/* Fim do Quiz */
+
+/* Inicio do Footer */
+
+.footer {
+    display: flex;
+    justify-content: center;
+    color: #2B3133;
+    background-color: #000000;
+    font-size: 15px;
+    padding: 0.2%;
+    
+}
+
+/* Fim do footer */
