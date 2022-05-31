@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="Style.css" />
   <link rel="shortcut icon" href="imgs/Logo.png" />
+  <script src="js/login.js"></script>
   <title>Feel the Music</title>
 </head>
 
@@ -19,19 +20,19 @@
         <img src="imgs/Logo.png">
         <div class="label">
           <label>Nome: </label>
-          <input type="text" id="inp_nome" placeholder="User">
+          <input type="text" id="ipt_nome" placeholder="User">
         </div>
         <div class="label">
           <label>Email: </label>
-          <input type="text" id="inp_email" placeholder="email@email.com">
+          <input type="text" id="ipt_email" placeholder="email@email.com">
         </div>
         <div class="label">
           <label>Senha: </label>
-          <input type="password" id="inp_senha" placeholder="********">
+          <input type="password" id="ipt_senha" placeholder="********">
         </div>
         <div class="label">
           <label>Confirmação de Senha: </label>
-          <input type="password" id="inp_confirmacao" placeholder="********">
+          <input type="password" id="ipt_confirmacao" placeholder="********">
         </div>
         <div class="label">
           <span style="font-size: 18px;">Já é membro?</span> <a href="Index.html">Entrar</a>
@@ -43,33 +44,5 @@
 
   <!-- Fim do Registro -->
 </body>
-
-<script>
-
-  function cadastrar() {
-    var nome = inp_nome.value,
-      email = inp_email.value,
-      senha = inp_senha.value,
-      confirmacao = inp_confirmacao.value;
-
-    if (nome == nome.indexOf("")) {
-      alert("Nome não pode estar em branco, por favor, insira um Nome valido.")
-    } else if (email == email.indexOf("")) {
-      alert("Email não pode estar em branco, por favor, insira um Email valido.")
-    } else if (senha == senha.indexOf("")) {
-      alert("Senha não pode estar em branco, por favor, insira uma Senha valida.")
-    } else if (confirmacao == confirmacao.indexOf("")) {
-      alert("A confirmação de senha não pode estar em branco, por favor, insira uma senha valida.")
-    } else if(senha.length < 6) {
-      alert("A senha deve conter no minímo 6 digitos")
-    }else if (senha != confirmacao || confirmacao != senha) {
-      alert("A senha tem de ser EXATAMENTE igual a confirmação, por favor, digite novamente.")
-    } else {
-      alert("Tudo certo, você será redirecionado a Tela de Login do Feel the Music")
-      //window.location.href = "Login.html";
-    }
-  }
-
-</script>
 
 </html>
