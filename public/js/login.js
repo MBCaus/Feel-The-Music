@@ -6,7 +6,7 @@ function entrar() {
 
     // TODO: VERIFICAR AS VALIDAÇÕES QUE ELES ESTÃO APRENDENDO EM ALGORITMOS 
     if (nomeVar == "" || senhaVar == "") {
-        alert("Preencha todos os campos para prosseguir!");
+        alert("Algum campo vazio, por favor, verifique novamente.");
         return false;
     }
 
@@ -44,7 +44,7 @@ function entrar() {
 
         } else {
 
-            alert("Houve um erro ao tentar realizar o login!");
+            alert("Houve um erro ao tentar realizar o login, por favor, tente novamente mais tarde.");
 
             resposta.text().then(texto => {
                 console.error(texto);
@@ -91,17 +91,17 @@ function cadastrar() {
     var confirmacaoVar = ipt_confirmacao.value;
 
     if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoVar == "") {
-        alert("Preencha todos os campos para prosseguir!");
+        alert("Algum campo vazio, por favor, verifique novamente.");
         return false;
     }
 
     if (emailVar.indexOf("@") == -1 || emailVar.indexOf(".com") == -1) {
-        alert("Ops, e-mail inválido! Verifique e tente novamente.");
+        alert("Email invalido, insira um emaio valido para prosseguir.");
         return false;
     }
 
     if (senhaVar != confirmacaoVar) {
-        alert("As senhas inseridas devem ser iguais para prosseguir!");
+        alert("As senhas inseridas devem EXATAMENTE iguais, por favor, insira novamente.");
         return false;
     }
 
@@ -123,11 +123,11 @@ function cadastrar() {
         console.log("resposta: ", resposta);
 
         if (resposta.ok) {
-            alert("Cadastro realizado com sucesso!");
+            alert("Cadastro realizado com sucesso.");
             window.location = "Index.html";
             limparFormulario();
         } else {
-            alert("Houve um erro ao tentar realizar o cadastro!");
+            alert("Houve um erro ao tentar Cadastrar, por favor, tente novamente mais tarde.");
         }
     }).catch(function (resposta) {
         console.log(`#ERRO: ${resposta}`);
