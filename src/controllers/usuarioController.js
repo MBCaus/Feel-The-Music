@@ -94,9 +94,42 @@ function cadastrar(req, res) {
     }
 }
 
+function cadastrar_genero(req, res) {
+    // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
+    var genero = req.body.generoServer;
+    var descricao = req.body.descricaoServer;
+    var user = req.body.userServer;
+
+    // Faça as validações dos valores
+    if (genero == undefined) {
+        res.status(400).send("Genero indefinido.");
+    } else if (descricao == undefined) {
+        res.status(400).send("Descrição indefinido.");
+    } else {
+        
+        // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
+        usuarioModel.cadastrar_genero(genero, descricao, user)
+            .then(
+                function (resultado) {
+                    res.json(resultado);
+                }
+            ).catch(
+                function (erro) {
+                    console.log(erro);
+                    console.log(
+                        "\nHouve um erro ao realizar o cadastro! Erro: ",
+                        erro.sqlMessage
+                    );
+                    res.status(500).json(erro.sqlMessage);
+                }
+            );
+    }
+}
+
 module.exports = {
     entrar,
     cadastrar,
+    cadastrar_genero,
     listar,
     testar
 }

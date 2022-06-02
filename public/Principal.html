@@ -239,7 +239,8 @@
             <div class="genero" id="genero1" style="display: none;">
                 <div class="mensagem_genero">
                     <p>Gostaria de ver algum outro <span>gênero</span> musical aqui no site? então faça o
-                        <span>cadastro</span> de novos estilos!</p>
+                        <span>cadastro</span> de novos estilos!
+                    </p>
                 </div>
                 <div class="nome_genero">
                     <p>Nome do Gênero:</p>
@@ -247,10 +248,10 @@
                 </div>
                 <div class="descricao">
                     <p>Adicione também uma descrição sobre o gênero:</p>
-                    <input type="text" id="ipt_descricao_genero">
+                    <textarea id="ipt_descricao_genero" cols="30" rows="10"></textarea>
                 </div>
                 <button onclick="jogar_denovo()">↺ Jogar Novamente</button>
-                <button onclick="cadastrar()">Cadastrar</button>
+                <button onclick="cadastrar_genero()">Cadastrar</button>
             </div>
         </div>
     </div>
@@ -270,3 +271,52 @@
 </body>
 
 </html>
+
+<script>
+
+    function cadastrar_genero() {
+
+        var generoVar = ipt_genero.value;
+        var descricaoVar = ipt_descricao_genero.value;
+        var userVar = sessionStorage.ID_USUARIO;
+
+        if (generoVar == "" || descricaoVar == "") {
+
+            alert("Preencha todos os campos!");
+            return false;
+        }
+
+        // Enviando o valor da nova input
+        fetch("/usuarios/cadastrar_genero", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                generoServer: generoVar,
+                descricaoServer: descricaoVar,
+                userServer: userVar
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                alert("Cadastrado com sucesso!");
+                console.log("Cadastrado com sucesso!");
+
+                ipt_genero.value = '';
+                ipt_descricao_genero.value = '';
+            } else {
+                throw ("Houve um erro ao tentar realizar o cadastro!");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+        });
+
+        return false;
+    }
+
+</script>

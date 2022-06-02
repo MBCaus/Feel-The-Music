@@ -311,9 +311,20 @@ function rock8() {
         Caso queira saber mais sobre o estilo músical <a href="Sertanejo.html">${estilos[2]}</a>, 
         clique na palavra e seja redirecionado a uma página 
         com a história do <a href="Sertanejo.html">${estilos[2]}</a>.`
+
+        // estilo = 'Funk';
+
+        // estilo();
     }
 
 }
+
+// function estilo(){
+
+//     select count(estilos) from tbtal where = estilo
+    
+//     tantos tambem concordam com vc
+// }
 
 function funk8() {
     contador = 0;

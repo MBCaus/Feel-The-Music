@@ -525,7 +525,11 @@ input {
     font-weight: bold;
 }
 
-.descricao input {
+.descricao textarea {
+    resize: none;
+    padding: 10px;
+    border-radius: 15px;
+    border: none;
     width: 30%;
     height: 100px;
     margin-bottom: 50px;
