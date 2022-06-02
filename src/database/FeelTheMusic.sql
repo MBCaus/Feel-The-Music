@@ -20,7 +20,7 @@ CREATE TABLE NovosGeneros (
 	Descricao varchar(300),
 	fkUsuario INT,
 	FOREIGN KEY(fkUsuario) REFERENCES Usuarios(idUsuario)
-)AUTO_INCREMENTE = 10000;
+)AUTO_INCREMENT = 10000;
 
 
 
