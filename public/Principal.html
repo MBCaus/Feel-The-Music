@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="imgs/Logo.png" />
     <link rel="stylesheet" href="Style.css">
-    <script src="Quiz.js"></script>
+    <script src="JavaScript.js"></script>
     <script src="js/login.js"></script>
     <title>Feel the Music</title>
 </head>
@@ -88,6 +88,47 @@
     </div>
 
     <!-- Fim do Contexto -->
+
+    <!-- Inicio do Slider -->
+
+    <div class="roleta">
+        <div class="slider">
+            <div class="slides">
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+
+                <div class="slide first">
+                    <a href="Rock.html">
+                        <img src="imgs/Slide0.jpg" alt="a">
+                    </a>
+                </div>
+                <div class="slide">
+                    <a href="Funk.html">
+                        <img src="imgs/Slide1.jpg" alt="b">
+                    </a>
+                </div>
+                <div class="slide">
+                    <a href="Sertanejo.html">
+                        <img src="imgs/Slide2.jpg" alt="c">
+                    </a>
+                </div>
+
+                <div class="navigatio-auto">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                    <div class="auto-btn3"></div>
+                </div>
+            </div>
+            <div class="manual-navigation">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fim do Slider -->
 
     <!-- Inicio do Quiz -->
 
@@ -273,50 +314,22 @@
 </html>
 
 <script>
+    var count = 1;
 
-    function cadastrar_genero() {
+    document.getElementById("radio1").checked = true;
 
-        var generoVar = ipt_genero.value;
-        var descricaoVar = ipt_descricao_genero.value;
-        var userVar = sessionStorage.ID_USUARIO;
+    setInterval(function () {
+        nextImage();
+    }, 5000)
 
-        if (generoVar == "" || descricaoVar == "") {
+    function nextImage() {
+        count++;
 
-            alert("Preencha todos os campos!");
-            return false;
+        if (count > 3) {
+            count = 1;
         }
 
-        // Enviando o valor da nova input
-        fetch("/usuarios/cadastrar_genero", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                // crie um atributo que recebe o valor recuperado aqui
-                // Agora vá para o arquivo routes/usuario.js
-                generoServer: generoVar,
-                descricaoServer: descricaoVar,
-                userServer: userVar
-            })
-        }).then(function (resposta) {
+        document.getElementById("radio" + count).checked = true;
 
-            console.log("resposta: ", resposta);
-
-            if (resposta.ok) {
-                alert("Cadastrado com sucesso!");
-                console.log("Cadastrado com sucesso!");
-
-                ipt_genero.value = '';
-                ipt_descricao_genero.value = '';
-            } else {
-                throw ("Houve um erro ao tentar realizar o cadastro!");
-            }
-        }).catch(function (resposta) {
-            console.log(`#ERRO: ${resposta}`);
-        });
-
-        return false;
     }
-
 </script>

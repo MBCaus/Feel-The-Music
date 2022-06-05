@@ -135,3 +135,48 @@ function cadastrar() {
 
     return false;
 }
+
+function cadastrar_genero() {
+
+    var generoVar = ipt_genero.value;
+    var descricaoVar = ipt_descricao_genero.value;
+    var userVar = sessionStorage.ID_USUARIO;
+
+    if (generoVar == "" || descricaoVar == "") {
+
+        alert("Preencha todos os campos!");
+        return false;
+    }
+
+    // Enviando o valor da nova input
+    fetch("/usuarios/cadastrar_genero", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            // crie um atributo que recebe o valor recuperado aqui
+            // Agora vá para o arquivo routes/usuario.js
+            generoServer: generoVar,
+            descricaoServer: descricaoVar,
+            userServer: userVar
+        })
+    }).then(function (resposta) {
+
+        console.log("resposta: ", resposta);
+
+        if (resposta.ok) {
+            alert("Cadastrado com sucesso!");
+            console.log("Cadastrado com sucesso!");
+
+            ipt_genero.value = '';
+            ipt_descricao_genero.value = '';
+        } else {
+            throw ("Houve um erro ao tentar realizar o cadastro!");
+        }
+    }).catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+    });
+
+    return false;
+}
